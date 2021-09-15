@@ -1,5 +1,4 @@
 import AuthenticationService from '../service/AuthenticationService';
-import EmailService from '../service/EmailService';
 import { UserModel } from '../models/User';
 
 export default (app) => {

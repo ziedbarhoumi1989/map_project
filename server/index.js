@@ -5,10 +5,9 @@ import logger from './middleware/logger';
 import withAuthentication from './middleware/withAuthentication';
 import withAdminPermissions from './middleware/withAdminPermissions';
 import getUsersRoutes from './routes/users';
-// import getPostsRoutes from './routes/posts';
+
 import getLocationsRoutes from './routes/locations'
 import getAuthRoutes from './routes/auth';
-// import getCommentRoutes from './routes/comments';
  import db from './db';
 
 const app = express();
@@ -20,9 +19,8 @@ app.use(withAdminPermissions);
 app.use(logger);
 
 getUsersRoutes(app);
-//getPostsRoutes(app);
+
 getAuthRoutes(app);
-//getCommentRoutes(app);
 getLocationsRoutes(app)
 const port = process.env.PORT;
 
